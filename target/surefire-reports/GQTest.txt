@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: HMTest
+Test set: GQTest
 -------------------------------------------------------------------------------
-Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s - in HMTest
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in GQTest
