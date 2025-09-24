@@ -2,6 +2,9 @@
 //Hooriya Kazmi
 //hkazm2
 //hkazm2@uic.edu
+//Ammani Khan
+//akhan381
+//akhan381@uic.edu
 //Implements custom GenericList, GenericQueue, and
 // MyHashMap data structures with iterators for CS342 Project 1
 public class GLProject {
