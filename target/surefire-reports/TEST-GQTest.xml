@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="HMTest" time="0.094" tests="9" errors="0" skipped="0" failures="0">
-=======
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="HMTest" time="0.022" tests="9" errors="0" skipped="0" failures="0">
->>>>>>> 2fd55e8af76518e722a9b9e40c3351e3745496f9
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="GQTest" time="0" tests="14" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -15,14 +11,9 @@
     <property name="java.vm.specification.version" value="17"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
-<<<<<<< HEAD
-    <property name="sun.boot.library.path" value="C:\Users\amman\fall 2024 mess\Downloads\jdk-11.0.28_windows-x64_bin\jdk-11.0.28\bin"/>
-    <property name="sun.java.command" value="C:\Users\amman\AppData\Local\Temp\surefire11978309135963857347\surefirebooter6965808134753154124.jar C:\Users\amman\AppData\Local\Temp\surefire11978309135963857347 2025-09-24T13-59-17_761-jvmRun1 surefire12656331033100241191tmp surefire_010652435682039947989tmp"/>
-=======
     <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk@17/17.0.15/libexec/openjdk.jdk/Contents/Home/lib"/>
     <property name="sun.java.command" value="/Users/hooriyakazmi/Downloads/GLMaven_Project1_Fall2025/target/surefire/surefirebooter8915875242201942774.jar /Users/hooriyakazmi/Downloads/GLMaven_Project1_Fall2025/target/surefire 2025-09-24T14-33-54_619-jvmRun1 surefire1903605694006915161tmp surefire_05673104062646967989tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
->>>>>>> 2fd55e8af76518e722a9b9e40c3351e3745496f9
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/hooriyakazmi/Downloads/GLMaven_Project1_Fall2025/target/test-classes:/Users/hooriyakazmi/Downloads/GLMaven_Project1_Fall2025/target/classes:/Users/hooriyakazmi/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.1/junit-jupiter-5.9.1.jar:/Users/hooriyakazmi/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.1/junit-jupiter-api-5.9.1.jar:/Users/hooriyakazmi/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/hooriyakazmi/.m2/repository/org/junit/platform/junit-platform-commons/1.9.1/junit-platform-commons-1.9.1.jar:/Users/hooriyakazmi/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/hooriyakazmi/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.1/junit-jupiter-params-5.9.1.jar:/Users/hooriyakazmi/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.1/junit-jupiter-engine-5.9.1.jar:/Users/hooriyakazmi/.m2/repository/org/junit/platform/junit-platform-engine/1.9.1/junit-platform-engine-1.9.1.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -37,13 +28,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-<<<<<<< HEAD
-    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\amman\AppData\Local\Temp\surefire11978309135963857347\surefirebooter6965808134753154124.jar"/>
-    <property name="user.script" value=""/>
-=======
     <property name="surefire.real.class.path" value="/Users/hooriyakazmi/Downloads/GLMaven_Project1_Fall2025/target/surefire/surefirebooter8915875242201942774.jar"/>
->>>>>>> 2fd55e8af76518e722a9b9e40c3351e3745496f9
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="17.0.15+0"/>
@@ -71,25 +56,18 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-<<<<<<< HEAD
-  <testcase name="testReplaceMissingDoesNotChangeSize" classname="HMTest" time="0.057"/>
-  <testcase name="testGetUnderMultipleInserts" classname="HMTest" time="0.001"/>
-  <testcase name="testReplaceUpdatesValue" classname="HMTest" time="0.001"/>
-  <testcase name="testIteratorCoversAllValues" classname="HMTest" time="0.004"/>
-  <testcase name="testConstructorAndPut" classname="HMTest" time="0.003"/>
-  <testcase name="testGetAndReplace" classname="HMTest" time="0.001"/>
-  <testcase name="testCollisionsIncreaseSize" classname="HMTest" time="0.001"/>
-  <testcase name="testIsEmpty" classname="HMTest" time="0.001"/>
-  <testcase name="testIterator" classname="HMTest" time="0.001"/>
-=======
-  <testcase name="testReplaceMissingDoesNotChangeSize" classname="HMTest" time="0.011"/>
-  <testcase name="testGetUnderMultipleInserts" classname="HMTest" time="0"/>
-  <testcase name="testReplaceUpdatesValue" classname="HMTest" time="0"/>
-  <testcase name="testIteratorCoversAllValues" classname="HMTest" time="0.001"/>
-  <testcase name="testConstructorAndPut" classname="HMTest" time="0"/>
-  <testcase name="testGetAndReplace" classname="HMTest" time="0"/>
-  <testcase name="testCollisionsIncreaseSize" classname="HMTest" time="0"/>
-  <testcase name="testIsEmpty" classname="HMTest" time="0"/>
-  <testcase name="testIterator" classname="HMTest" time="0"/>
->>>>>>> 2fd55e8af76518e722a9b9e40c3351e3745496f9
+  <testcase name="testDescendingIteratorOnSingleAndEmpty" classname="GQTest" time="0"/>
+  <testcase name="testForwardIteratorOnEmpty" classname="GQTest" time="0"/>
+  <testcase name="testForwardIteratorCoversAllElementsInOrder" classname="GQTest" time="0"/>
+  <testcase name="testSetOutOfBoundsReturnsNullAndNoChange" classname="GQTest" time="0"/>
+  <testcase name="testDumpListReturnsCopy" classname="GQTest" time="0"/>
+  <testcase name="testEnqueueAppendsAndUpdatesLength" classname="GQTest" time="0"/>
+  <testcase name="testSetReplacesAndReturnsOldValue" classname="GQTest" time="0"/>
+  <testcase name="testNodeCodeIsSetByAddWithCode" classname="GQTest" time="0"/>
+  <testcase name="testDequeueOrderAndEmptyBehavior" classname="GQTest" time="0"/>
+  <testcase name="testGetBounds" classname="GQTest" time="0"/>
+  <testcase name="testAddWithCodeAppendsAtTail" classname="GQTest" time="0"/>
+  <testcase name="testDescendingIteratorCoversAllElementsInReverse" classname="GQTest" time="0"/>
+  <testcase name="testPrintOutputsValuesOrEmptyList" classname="GQTest" time="0"/>
+  <testcase name="testConstructorInitializesHeadAndLength" classname="GQTest" time="0"/>
 </testsuite>

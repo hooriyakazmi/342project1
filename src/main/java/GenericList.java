@@ -24,10 +24,9 @@ public abstract class GenericList<T> implements Iterable<T> {
         }
         Node<T> curr = head;
         while (curr != null) {
-            System.out.print(curr.data + " ");
+            System.out.println(curr.data);  // one value per line
             curr = curr.next;
         }
-        System.out.println(); // newline at the end
     }
 
     // ===== abstract methods (to be filled in subclasses like GenericQueue) =====
