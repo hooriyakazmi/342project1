@@ -3,11 +3,11 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public abstract class GenericList<T> implements Iterable<T> {
-    // ===== fields =====
+    // fields
     private Node<T> head;
     private int length;
 
-    // ===== inner node class =====
+    //  inner node class
     public static class Node<U> {
         public U data;
         public int code;
@@ -16,7 +16,7 @@ public abstract class GenericList<T> implements Iterable<T> {
         public Node(U data, int code) { this.data = data; this.code = code; }
     }
 
-    // ===== printing =====
+    // printing
     public void print() {
         if (head == null) {
             System.out.println("Empty List");
@@ -29,7 +29,7 @@ public abstract class GenericList<T> implements Iterable<T> {
         }
     }
 
-    // ===== abstract methods (to be filled in subclasses like GenericQueue) =====
+    //  abstract methods (to be filled in subclasses like GenericQueue)
     public abstract void add(T data);
     public abstract T delete();
 
@@ -60,14 +60,14 @@ public abstract class GenericList<T> implements Iterable<T> {
         return old;
     }
 
-    // ===== getters/setters for private fields =====
+    // getters/setters for private fields
     public Node<T> getHead() { return head; }
     public void setHead(Node<T> h) { head = h; }
     public int getLength() { return length; }
     public void setLength(int n) { length = n; }
 
 
-    // ===== iterators =====
+    // iterator
     @Override
     public Iterator<T> iterator() {
         return new GLLIterator<>(head);

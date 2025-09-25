@@ -10,7 +10,6 @@ import java.util.List;
 
 public class GQTest {
 
-    // ===== Constructors / length tracking =====
     @Test
     public void testConstructorInitializesHeadAndLength() {
         GenericQueue<Integer> q = new GenericQueue<>(1);
@@ -18,7 +17,6 @@ public class GQTest {
         assertEquals(Integer.valueOf(1), q.get(0));
     }
 
-    // ===== enqueue (delegates to add) =====
     @Test
     public void testEnqueueAppendsAndUpdatesLength() {
         GenericQueue<Integer> q = new GenericQueue<>(1);
@@ -28,7 +26,6 @@ public class GQTest {
         assertEquals(Arrays.asList(1, 2, 3), q.dumpList());
     }
 
-    // ===== add(T, code) overload =====
     @Test
     public void testAddWithCodeAppendsAtTail() {
         GenericQueue<Integer> q = new GenericQueue<>(1);
@@ -40,7 +37,6 @@ public class GQTest {
         assertEquals(Arrays.asList(1, 2, 3, 42), q.dumpList());
     }
 
-    // ===== dumpList returns a copy, not the internal structure =====
     @Test
     public void testDumpListReturnsCopy() {
         GenericQueue<Integer> q = new GenericQueue<>(1);
@@ -55,7 +51,6 @@ public class GQTest {
         assertEquals(Integer.valueOf(1), q.get(0));
     }
 
-    // ===== get (in-bounds / out-of-bounds) =====
     @Test
     public void testGetBounds() {
         GenericQueue<Integer> q = new GenericQueue<>(1);
@@ -68,7 +63,6 @@ public class GQTest {
         assertNull(q.get(-1));
     }
 
-    // ===== set (in-bounds) =====
     @Test
     public void testSetReplacesAndReturnsOldValue() {
         GenericQueue<Integer> q = new GenericQueue<>(1);
@@ -81,7 +75,6 @@ public class GQTest {
         assertEquals(3, q.getLength(), "length should not change on successful set");
     }
 
-    // ===== set (out-of-bounds) =====
     @Test
     public void testSetOutOfBoundsReturnsNullAndNoChange() {
         GenericQueue<Integer> q = new GenericQueue<>(1);
@@ -93,7 +86,7 @@ public class GQTest {
         assertEquals(2, q.getLength());
     }
 
-    // ===== dequeue (delegates to delete from tail) =====
+
     @Test
     public void testDequeueOrderAndEmptyBehavior() {
         GenericQueue<Integer> q = new GenericQueue<>(1);
@@ -109,7 +102,6 @@ public class GQTest {
         assertEquals(0, q.getLength());
     }
 
-    // ===== iterator (forward: head -> tail) =====
     @Test
     public void testForwardIteratorCoversAllElementsInOrder() {
         GenericQueue<Integer> q = new GenericQueue<>(1);
@@ -121,7 +113,6 @@ public class GQTest {
         assertEquals(Arrays.asList(1, 2, 3), seen);
     }
 
-    // ===== descendingIterator (tail -> head) =====
     @Test
     public void testDescendingIteratorCoversAllElementsInReverse() {
         GenericQueue<Integer> q = new GenericQueue<>(1);
@@ -134,7 +125,6 @@ public class GQTest {
         assertEquals(Arrays.asList(3, 2, 1), seen);
     }
 
-    // ===== descendingIterator edge cases =====
     @Test
     public void testDescendingIteratorOnSingleAndEmpty() {
         // single
@@ -144,14 +134,12 @@ public class GQTest {
         assertEquals(Integer.valueOf(10), it1.next());
         assertFalse(it1.hasNext());
 
-        // empty (dequeue to empty)
         GenericQueue<Integer> empty = new GenericQueue<>(5);
         empty.dequeue(); // now empty
         Iterator<Integer> it2 = empty.descendingIterator();
         assertFalse(it2.hasNext());
     }
 
-    // ===== print(): capture System.out and assert output =====
     @Test
     public void testPrintOutputsValuesOrEmptyList() {
         // capture stdout
@@ -167,32 +155,29 @@ public class GQTest {
             q.print();
 
             String out1 = buffer.toString().replace("\r\n", "\n").trim();
-            // Expect three lines: "1", "2", "3"
+
             assertEquals("1\n2\n3", out1);
 
-            // Reset buffer and test empty case
             buffer.reset();
             GenericQueue<Integer> e = new GenericQueue<>(9);
-            e.dequeue(); // make empty
+            e.dequeue();
             e.print();
 
             String out2 = buffer.toString().replace("\r\n", "\n").trim();
             assertEquals("Empty List", out2);
 
         } finally {
-            // restore stdout
             System.setOut(originalOut);
         }
     }
     @Test
     public void testNodeCodeIsSetByAddWithCode() {
-        GenericQueue<Integer> q = new GenericQueue<>(1);   // first node (no code)
+        GenericQueue<Integer> q = new GenericQueue<>(1);
         q.add(2, 222);
         q.add(3, 333);
 
-        // Walk nodes and verify codes where we set them
         GenericList.Node<Integer> n = q.getHead();
-        assertEquals(Integer.valueOf(1), n.data);      // first node
+        assertEquals(Integer.valueOf(1), n.data);
         n = n.next;
         assertEquals(Integer.valueOf(2), n.data);
         assertEquals(222, n.code);
@@ -203,7 +188,7 @@ public class GQTest {
     @Test
     public void testForwardIteratorOnEmpty() {
         GenericQueue<Integer> q = new GenericQueue<>(7);
-        q.dequeue(); // now empty
+        q.dequeue();
         int count = 0;
         for (int x : q) count++;
         assertEquals(0, count);
